@@ -64,10 +64,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    audio.primary.msm8960 \
+    audio.primary.msm8974 \
     audio.r_submix.default \
     audio.usb.default \
-    audio_policy.msm8960 \
+    audio_policy.msm8974 \
     libaudio-resampler
 
 PRODUCT_PACKAGES += \
@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8960
+    camera.msm8974
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -97,11 +97,11 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    copybit.msm8960 \
-    gralloc.msm8960 \
-    hwcomposer.msm8960 \
+    copybit.msm8974 \
+    gralloc.msm8974 \
+    hwcomposer.msm8974 \
     libgenlock \
-    memtrack.msm8960
+    memtrack.msm8974
 
 # Filesystem
 PRODUCT_PACKAGES += \
@@ -123,11 +123,11 @@ PRODUCT_PACKAGES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
-    keystore.msm8960
+    keystore.msm8974
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8960
+    lights.msm8974
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -145,7 +145,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnfc \
     libnfc_jni \
-    nfc.msm8960 \
+    nfc.msm8974 \
     Nfc \
     Tag \
     com.android.nfc_extras
@@ -173,7 +173,7 @@ PRODUCT_BOOT_JARS += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
-    power.msm8960
+    power.msm8974
 
 # QRNGD
 PRODUCT_PACKAGES += \
@@ -230,26 +230,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
-
-PRODUCT_PACKAGES += \
-    WCNSS_qcom_wlan_nv.bin \
-    WCNSS_qcom_wlan_nv_calibration.bin \
-    WCNSS_qcom_wlan_nv_regulatory.bin \
-    WCNSS_qcom_wlan_nv_calibration_0x3.bin \
-    WCNSS_qcom_wlan_nv_calibration_0x4.bin \
-    WCNSS_qcom_wlan_nv_calibration_0x5.bin \
-    WCNSS_qcom_wlan_nv_calibration_0x6.bin \
-    WCNSS_qcom_wlan_nv_regulatory_0x3.bin \
-    WCNSS_qcom_wlan_nv_regulatory_0x4.bin \
-    WCNSS_qcom_wlan_nv_regulatory_0x5.bin \
-    WCNSS_qcom_wlan_nv_regulatory_0x6.bin
-
-PRODUCT_COPY_FILES += \
-    kernel/motorola/victara/drivers/staging/prima_mmi/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    kernel/motorola/victara/drivers/staging/prima_mmi/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_calibration.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_calibration.bin \
-    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_calibration_0x1.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_calibration_0x1.bin \
-    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_calibration_0x2.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_calibration_0x2.bin \
-    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_regulatory.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_regulatory.bin \
-    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_regulatory_0x1.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_regulatory_0x1.bin \
-    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_regulatory_0x2.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_regulatory_0x2.bin
