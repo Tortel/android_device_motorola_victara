@@ -77,7 +77,7 @@ PRODUCT_PACKAGES += \
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+    $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -150,12 +150,6 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-ifeq ($(TARGET_BUILD_VARIANT),user)
-    PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
-else
-    PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/nfcee_access_debug.xml:system/etc/nfcee_access.xml
-endif
-
 # OMX
 PRODUCT_PACKAGES += \
     libdashplayer \
@@ -191,10 +185,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mmi.boot.sh \
+    init.mmi.diag.rc \
+    init.mmi.radio.sh \
+    init.mmi.rc \
     init.mmi.touch.sh \
+    init.mmi.usb.rc \
+    init.mmi.usb.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
+    init.target.rc \
     ueventd.qcom.rc
 
 # Support
@@ -204,7 +204,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermald-victara.conf:system/etc/thermald-victara.conf
+    $(LOCAL_PATH)/configs/thermal-engine-victara.conf:system/etc/thermal-engine-victara.conf
 
 # Torch
 PRODUCT_PACKAGES += \
