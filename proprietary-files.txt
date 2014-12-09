@@ -159,8 +159,8 @@ vendor/lib/libOpenVG.so
 vendor/lib/libsc-a3xx.so
 
 # Graphics firmware
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
 
 # IMS - currently unused but have dependencies to qmi
 bin/imsdatadaemon
