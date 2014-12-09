@@ -184,3 +184,6 @@ persist.mot.gps.smart_battery=1
 
 # Define our product id for mtp,adb access
 ro.usb.mtp_adb=0x2e76
+
+# Screen density
+ro.sf.lcd_density=440
