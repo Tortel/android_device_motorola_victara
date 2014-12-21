@@ -257,6 +257,8 @@ on post-fs-data
     mkdir /data/misc/location 0770 gps gps
     mkdir /data/misc/location/mq 0770 gps gps
     mkdir /data/misc/location/xtwifi 0770 gps gps
+    mkdir /data/misc/location/quipc 0770 gps system
+    mkdir /data/misc/location/gsiff 0770 gps gps
 
     #Create directory from IMS services
     mkdir /data/shared 0755
@@ -551,11 +553,17 @@ service dhcpcd_bnep4 /system/bin/dhcpcd -BKLG
     disabled
     oneshot
 
-service gpsone_daemon /system/bin/gpsone_daemon
+#start GNSS/Sensor interface daemon
+service gsiff_daemon /system/vendor/bin/gsiff_daemon
     class late_start
     user gps
-    group gps inet net_raw
-    disabled
+    group gps net_raw
+
+#service gpsone_daemon /system/bin/gpsone_daemon
+#    class late_start
+#    user gps
+#    group gps inet net_raw
+#    disabled
 
 #service quipc_main /system/bin/quipc_main
 #    class late_start

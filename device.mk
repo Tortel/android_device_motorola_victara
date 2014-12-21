@@ -150,6 +150,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     charge_only_mode
 
+# GPS
+PRODUCT_PACKAGES += \
+    libloc_adapter \
+    libloc_eng \
+    libloc_api_v02 \
+    libloc_ds_api \
+    libloc_core \
+    libizat_core \
+    libgeofence \
+    libgps.utils \
+    gps.default \
+    flp.default \
+    liblbs_core \
+    flp.conf \
+    sap.conf
+#    gsiff_daemon \
+
+
 # NFC
 PRODUCT_PACKAGES += \
     libnfc \
