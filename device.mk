@@ -278,3 +278,7 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
 #    CMActions \
 #    libjni_CMActions
+
+# Keymaster HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
